@@ -1,4 +1,4 @@
-# todo
+# todo Fron End
 
 ## CLI Commands
 
@@ -19,4 +19,14 @@ npm run serve
 npm run test
 ```
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+
+# todo Back End
+
+## CLI Commands
+
+```bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:3001
+npm run dev
