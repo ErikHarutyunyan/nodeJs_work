@@ -1,22 +1,17 @@
 [
   {
-    "id": 2,
-    "text": "List 2",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "text": "List 3",
-    "completed": false
-  },
-  {
     "id": 0.6062164301209312,
     "text": "List1",
     "isCompleted": false
   },
   {
-    "id": 0.33212823051903806,
-    "text": "List4",
+    "id": 0.011607028736175584,
+    "text": "List2",
+    "isCompleted": false
+  },
+  {
+    "id": 0.30715685404726245,
+    "text": "List3",
     "isCompleted": false
   }
 ]

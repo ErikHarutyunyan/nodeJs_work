@@ -5,6 +5,8 @@ import cors from "cors";
 
 const app = express();
 
+app.use(cors());
+
 app.use(express.json());
 
 app.get("/todos", (req, res) => {
@@ -20,7 +22,7 @@ app.post("/todos", (req, res) => {
       JSON.stringify(req.body, undefined, 2)
     )
     .then(() => {
-      res.send("todos posts");
+      res.json({ mess: "todos posts" });
     });
 });
 

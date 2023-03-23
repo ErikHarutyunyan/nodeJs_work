@@ -24,16 +24,19 @@ const App = () => {
   }, todos);
 
   const handleSubmit = async () => {
-    const response = await fetch("http://localhost:3001/todos", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(todos),
-    });
-    // if (response.ok) {
-    //   console.log("todo post");
-	// } else {
-	// 	console.error("Error todo-list");
-    // }
+    if (todos) {
+      const response = await fetch("http://localhost:3001/todos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(todos),
+      });
+      if (response.ok) {
+        const res = await response.json();
+        console.log(res.mess);
+      } else {
+        console.error("Error todo-list");
+      }
+    }
   };
 
   if (!todos) {
