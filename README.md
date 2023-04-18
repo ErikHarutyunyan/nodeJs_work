@@ -10,7 +10,7 @@ This project is a simple TodoList application that allows users to create, edit,
 
 This project is a real-time chat application that allows users to join chat rooms and communicate with each other. The project uses Node.js, Express.js, and Socket.io to handle real-time communication between users.
 
-## Project 3: APIWeather
+## Project 3: WeatherApp
 
 This project is a simple weather application that retrieves weather information from an API and displays it to the user. The project uses React for the frontend and Node.js, Express.js to create the server and retrieve data from the API.
 
