@@ -1,9 +1,8 @@
 export const messageFish = Object.freeze({
-  notFish: "Fish species is not found",
-  notFoundSpeciesKey: "Fish species key is not found",
-  deleteKeySpecies: "Delete species key",
+  not: "Fish is not found",
+  notFoundKey: "Fish key is not found",
+  deleteKey: "Delete key",
 });
-
 
 export const statusCode = Object.freeze({
   server: 500,
@@ -19,5 +18,5 @@ export const statusCode = Object.freeze({
   accepted: 202,
 });
 
-// Cashe time
-export const DEFAULT_EXPIRATION = 10;
+// Cache time
+export const DEFAULT_EXPIRATION = 3000;

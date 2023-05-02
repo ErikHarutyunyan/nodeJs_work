@@ -6,6 +6,6 @@ const fishRouter = Router();
 fishRouter
   .route("/fish/:species")
   .get(fishController.getSpecies)
-  // .delete(fishController.deleteSpecies);
+  .delete(fishController.deleteSpecies);
 
 export default fishRouter;

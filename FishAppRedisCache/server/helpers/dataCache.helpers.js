@@ -1,13 +1,13 @@
-import redisConnect from "./../database/Redis.database.js";
-await redisConnect;
+import { statusCode } from "../constants/index.js";
+import { redisClient } from "../database/Redis.database.js";
 
-export async function dataCache(key, req, res) {
+export async function dataCache(key, req, res, message) {
   let results;
   try {
     const cacheResults = await redisClient.get(key);
     if (cacheResults != null) {
       results = JSON.parse(cacheResults);
-      res.send({
+      res.status(statusCode.ok).send({
         fromCache: true,
         data: results,
       });
@@ -16,7 +16,6 @@ export async function dataCache(key, req, res) {
       return false;
     }
   } catch (error) {
-    console.error(error);
-    res.status(404);
+    res.status(statusCode.conflict);
   }
 }

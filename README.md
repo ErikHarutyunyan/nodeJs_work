@@ -14,6 +14,10 @@ This project is a real-time chat application that allows users to join chat room
 
 This project is a simple weather application that retrieves weather information from an API and displays it to the user. The project uses React for the frontend and Node.js, Express.js to create the server and retrieve data from the API.
 
+## Project 4: FishAppRedisCache
+
+This is a Node.js and Express.js application that uses a Redis database to store and cache data. The program allows you to store data with a specified key in Redis and cache the data using that same key. Additionally, there is an endpoint available to delete data with a specific key from Redis.
+
 ## Running the projects
 
 To run the projects, you will need to have Node.js installed on your computer. Follow these steps to run the projects:
