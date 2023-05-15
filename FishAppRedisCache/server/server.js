@@ -3,14 +3,13 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-const port = process.env.PORT || 3002;
 
+import fishRouter from "./routes/fish.routes.js";
 import { notFound } from "./middleware/notFound.js";
-
 import { redisConnect } from "./database/Redis.database.js";
 await redisConnect();
-import fishRouter from "./routes/fish.routes.js";
 
+const port = process.env.PORT || 3002;
 const app = express();
 
 app.use(cors());
