@@ -1,6 +1,6 @@
 import { object, string, array } from "yup";
 
-export const schema_signup = object().shape({
+export const schemaRegister = object().shape({
   username: string()
     .max(40)
     .min(3, "User Name must be at least 3 characters")
@@ -20,7 +20,7 @@ export const schema_signup = object().shape({
   role: array().of(string()),
 });
 
-export const schema_signin = yup.object().shape({
+export const schemaLogin = object().shape({
   email: string()
     .email("Email should have correct format")
     .required("Email is a required field"),
@@ -33,7 +33,7 @@ export const schema_signin = yup.object().shape({
 
 const validationRegister = async (req, res, next) => {
   try {
-    schema_signup.validateSync(req.body);
+    schemaRegister.validateSync(req.body);
     next();
   } catch (err) {
     return res.status(400).json({ message: err.errors });
@@ -41,7 +41,7 @@ const validationRegister = async (req, res, next) => {
 };
 const validationLogin = async (req, res, next) => {
   try {
-    schema_signin.validateSync(req.body);
+    schemaLogin.validateSync(req.body);
     next();
   } catch (err) {
     return res.status(400).json({ message: err.errors });

@@ -7,11 +7,15 @@ module.exports = function (app) {
         next();
     });
 
-    app.get('/api/test/all', controller.allAccess);
+    app.get('/api/all', controller.allAccess);
 
-    app.get('/api/test/user', [authJwt.verifyToken], controller.userBoard);
+    app.get('/api/user', [authJwt.verifyToken], controller.userBoard);
 
-    app.get('/api/test/mod', [authJwt.verifyToken, authJwt.isModerator], controller.moderatorBoard);
+    app.get(
+      "/api/mod",
+      [authJwt.verifyToken, authJwt.isModerator],
+      controller.moderatorBoard
+    );
 
-    app.get('/api/test/admin', [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard);
+    app.get('/api/admin', [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard);
 };

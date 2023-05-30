@@ -19,7 +19,6 @@ const userSchema = new Schema({
   roles: [
     {
       type: Schema.Types.ObjectId,
-      enum: ["user", "admin", "super_admin"],
       default: ["user"],
       ref: "Role",
     },

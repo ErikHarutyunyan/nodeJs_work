@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
+import Role from "../models/role.model.js";
 
-const dbConnect = () => {
+export const dbConnect = () => {
   const connectionParams = { useUnifiedTopology: true, useNewUrlParser: true };
-  mongoose.connect(process.env.MONGO_URL, connectionParams);
+  mongoose.connect(process.env.DB, connectionParams);
 
   mongoose.connection.on("connected", () => {
+    initial();
     console.log("Connected to database Mongodb");
   });
 
