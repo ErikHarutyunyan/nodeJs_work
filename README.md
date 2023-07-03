@@ -20,7 +20,7 @@ This project is a simple weather application that retrieves weather information 
 
 This is a Node.js and Express.js application that uses a Redis database to store and cache data. The program allows you to store data with a specified key in Redis and cache the data using that same key. Additionally, there is an endpoint available to delete data with a specific key from Redis.
 
-## AuthCookieRoleJWT
+## AuthRoleJWT
 
 AuthRoleJWT is a project that implements role-based authentication using JSON Web Tokens (JWT), bcrypt, and MongoDB. It allows users to securely authenticate and access resources based on their roles. JWT ensures secure transmission and verification of user credentials, while bcrypt enhances security by hashing passwords. The integration with MongoDB enables efficient storage and retrieval of user data, ensuring a reliable authentication process. AuthRoleJWT provides a robust solution for managing role-based authentication, ensuring the security and privacy of user information
 
